@@ -2,15 +2,25 @@ import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { marked } from "marked";
 
-// Get page data
-async function getPageData(slug: string) {
+interface PageProps {
+  title: string;
+  description?: string;
+  featured_image?: string;
+  content: string;
+}
+async function getPageData(slug: string): Promise<PageProps | null> {
   const filePath = path.join(process.cwd(), "content", "pages", `${slug}.md`);
 
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContent);
-    return { ...data, content };
+    const htmlContent = marked(content);
+    return {
+      ...data,
+      content: htmlContent,
+    } as PageProps;
   } catch (error) {
     return null;
   }
@@ -34,12 +44,24 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="prose prose-lg max-w-none">
+      {/* <div className="prose prose-lg max-w-none">
         <div
           className="editable"
           dangerouslySetInnerHTML={{ __html: page.content }}
         />
-      </div>
+      </div> */}
+      {page.featured_image && (
+        <img
+          src={page.featured_image}
+          alt={page.title || ""}
+          className="w-full h-64 object-cover rounded-lg mb-8 editable"
+        />
+      )}
+      <h1 className="text-4xl font-bold mb-4 editable">{page.title}</h1>
+      <div
+        className="prose prose-lg max-w-none editable"
+        dangerouslySetInnerHTML={{ __html: page.content }}
+      />
     </div>
   );
 }
