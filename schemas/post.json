@@ -5,47 +5,35 @@
     "_inputs": {
       "title": {
         "type": "text",
-        "label": "Post Title",
-        "comment": "The title of your blog post"
+        "label": "Post Title"
       },
       "description": {
         "type": "textarea",
-        "label": "Meta Description",
-        "comment": "A brief description for SEO"
+        "label": "Meta Description"
       },
       "date": {
         "type": "date",
-        "label": "Publish Date",
-        "comment": "When to publish the post"
+        "label": "Publish Date"
       },
       "author": {
         "type": "select",
         "options": {
           "values_key": "authors"
-        },
-        "comment": "Who wrote this post"
+        }
       },
       "categories": {
         "type": "multiselect",
         "options": {
-          "values": [
-            "Technology",
-            "Design",
-            "Development",
-            "Business"
-          ]
-        },
-        "comment": "Categories for this post"
-      },
-      "featured_image": {
-        "type": "image",
-        "label": "Featured Image",
-        "comment": "The main image for the post"
+          "values": ["Technology", "Design", "Development", "Business"]
+        }
       },
       "content": {
         "type": "markdown",
-        "label": "Post Content",
-        "comment": "The main content of your post"
+        "label": "Post Content"
+      },
+      "featured_image": {
+        "type": "image",
+        "label": "Featured Image"
       }
     }
   }

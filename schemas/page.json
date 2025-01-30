@@ -5,34 +5,25 @@
     "_inputs": {
       "title": {
         "type": "text",
-        "label": "Page Title",
-        "comment": "The title of your page"
+        "label": "Page Title"
       },
       "description": {
         "type": "textarea",
-        "label": "Meta Description",
-        "comment": "A brief description for SEO"
+        "label": "Meta Description"
+      },
+      "content": {
+        "type": "markdown",
+        "label": "Page Content"
       },
       "featured_image": {
         "type": "image",
-        "label": "Featured Image",
-        "comment": "The main image for the page"
+        "label": "Featured Image"
       },
       "layout": {
         "type": "select",
         "options": {
-          "values": [
-            "default",
-            "wide",
-            "sidebar"
-          ]
-        },
-        "comment": "Choose the page layout"
-      },
-      "content": {
-        "type": "markdown",
-        "label": "Page Content",
-        "comment": "The main content of your page"
+          "values": ["default", "wide", "sidebar"]
+        }
       }
     }
   }
