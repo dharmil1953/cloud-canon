@@ -2,7 +2,7 @@ _schema: _schema
 source: /
 paths:
   uploads: uploads
-  static: ''
+  static: ""
 timezone: Asia/Calcutta
 markdown:
   engine: commonmark
@@ -14,7 +14,7 @@ markdown:
     spaced_lists: false
     sentence_per_line: false
     gfm: false
-    code_block_fences: '```'
+    code_block_fences: "```"
     escape_snippets_in_code_blocks: false
     treat_indentation_as_code: false
     table: false
@@ -23,3 +23,13 @@ markdown:
     superscript: false
     heading_ids: false
     attributes: false
+
+collections:
+  pages:
+    path: content/pages.json
+    label: Pages
+    format: json
+    schema:
+      title: Title
+      description: Description
+      content: Content
