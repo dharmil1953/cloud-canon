@@ -1,11 +1,10 @@
-# Base CloudCannon configuration
+
 paths:
   uploads: "public/uploads"
   data: "_data"
   collections: "content"
   layouts: "_layouts"
 
-# Collections for different content types
 collections_config:
   pages:
     path: "content/pages"
@@ -30,7 +29,6 @@ collections_config:
       default:
         path: "schemas/post.json"
 
-# Visual editor configuration
 _editables:
   text:
     italic: true
@@ -53,7 +51,6 @@ _editables:
     blockquote: true
     code: true
 
-# Data configuration
 data_config:
   authors:
     path: "_data/authors.json"
