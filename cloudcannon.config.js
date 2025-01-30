@@ -7,18 +7,17 @@ module.exports = {
     layouts: "_layouts",
   },
 
-  collections: {
+  // Collections for different content types
+  collections_config: {
     pages: {
-      name: "Pages",
       path: "content/pages",
       output: true,
       url: "/[slug]",
       _enabled_editors: ["visual", "content", "data"],
-      icon: "wysiwyg",
-      create: true,
+      parse_branch_index: true,
       add_options: [
         {
-          name: "New Page",
+          name: "Add New Page",
           schema: "default",
         },
       ],
@@ -29,16 +28,14 @@ module.exports = {
       },
     },
     posts: {
-      name: "Blog Posts",
       path: "content/posts",
       output: true,
       url: "/blog/[slug]",
       _enabled_editors: ["visual", "content", "data"],
-      icon: "article",
-      create: true,
+      parse_branch_index: true,
       add_options: [
         {
-          name: "New Post",
+          name: "Add New Post",
           schema: "default",
         },
       ],
