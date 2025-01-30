@@ -35,7 +35,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="prose prose-lg max-w-none">
-        <div dangerouslySetInnerHTML={{ __html: page.content }} />
+        <div
+          className="editable"
+          dangerouslySetInnerHTML={{ __html: page.content }}
+        />
       </div>
     </div>
   );
