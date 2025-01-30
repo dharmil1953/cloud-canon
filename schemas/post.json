@@ -1,0 +1,40 @@
+{
+  "post": {
+    "path": "schemas/post.json",
+    "name": "Blog Post",
+    "_inputs": {
+      "title": {
+        "type": "text",
+        "label": "Post Title"
+      },
+      "description": {
+        "type": "textarea",
+        "label": "Meta Description"
+      },
+      "date": {
+        "type": "date",
+        "label": "Publish Date"
+      },
+      "author": {
+        "type": "select",
+        "options": {
+          "values_key": "authors"
+        }
+      },
+      "categories": {
+        "type": "multiselect",
+        "options": {
+          "values": ["Technology", "Design", "Development", "Business"]
+        }
+      },
+      "content": {
+        "type": "markdown",
+        "label": "Post Content"
+      },
+      "featured_image": {
+        "type": "image",
+        "label": "Featured Image"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "site_title": "My Next.js Site",
+  "site_description": "A beautiful Next.js site with CloudCannon CMS",
+  "social_links": {
+    "twitter": "https://twitter.com/yourusername",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername"
+  },
+  "footer_text": "© 2024 Your Company. All rights reserved."
+}

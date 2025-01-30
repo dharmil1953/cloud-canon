@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "name": "John Doe",
+      "bio": "Senior Developer and Technical Writer",
+      "avatar": "/uploads/authors/john-doe.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "bio": "UX Designer and Content Strategist",
+      "avatar": "/uploads/authors/jane-smith.jpg"
+    }
+  ]
+}

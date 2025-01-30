@@ -1,0 +1,30 @@
+{
+  "page": {
+    "path": "schemas/page.json",
+    "name": "Page",
+    "_inputs": {
+      "title": {
+        "type": "text",
+        "label": "Page Title"
+      },
+      "description": {
+        "type": "textarea",
+        "label": "Meta Description"
+      },
+      "content": {
+        "type": "markdown",
+        "label": "Page Content"
+      },
+      "featured_image": {
+        "type": "image",
+        "label": "Featured Image"
+      },
+      "layout": {
+        "type": "select",
+        "options": {
+          "values": ["default", "wide", "sidebar"]
+        }
+      }
+    }
+  }
+}
