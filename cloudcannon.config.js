@@ -15,6 +15,7 @@ module.exports = {
       url: "/[slug]",
       _enabled_editors: ["visual", "content", "data"],
       icon: "wysiwyg",
+      create: true,
       add_options: [
         {
           name: "New Page",
@@ -34,6 +35,7 @@ module.exports = {
       url: "/blog/[slug]",
       _enabled_editors: ["visual", "content", "data"],
       icon: "article",
+      create: true,
       add_options: [
         {
           name: "New Post",
